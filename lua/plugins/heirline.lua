@@ -33,7 +33,7 @@ return {
             },
         }
         opts.statusline = { -- statusline
-            hl = { fg = 'fg', bg = 'bg' },
+            hl = { fg = 'black', bg = 'bg' },
             status.component.mode { mode_text = { padding = { left = 1, right = 1 } }, hl = { bold = true } }, -- add the mode text
             status.component.git_branch(),
             status.component.file_info(),
