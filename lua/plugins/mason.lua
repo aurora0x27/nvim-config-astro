@@ -4,6 +4,21 @@
 return {
     -- use mason-lspconfig to configure LSP installations
     {
+        'williamboman/mason.nvim',
+        event = { 'VimEnter' },
+        opts = {
+            pip = {
+              upgrade_pip = false,
+              install_args = pip_args,
+            },
+            ui = {
+              border = 'rounded',
+              width = 0.7,
+              height = 0.7,
+            },
+        },
+    },
+    {
         'williamboman/mason-lspconfig.nvim',
         -- overrides `require("mason-lspconfig").setup(...)`
         opts = function(_, opts)
